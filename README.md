@@ -5,18 +5,7 @@ This project implements a simple blockchain from scratch using JavaScript to dem
 
 ---
 
-## Block Structure
-Each block contains:
-- `index`: Position of the block in the chain
-- `timestamp`: Time of block creation
-- `data`: Stored information
-- `previousHash`: Hash of the previous block
-- `nonce`: Value used for Proof-of-Work
-- `hash`: SHA-256 hash of all fields
 
-SHA-256 ensures immutability and tamper detection.
-
----
 
 ## Blockchain Logic
 - The blockchain is an array of blocks
@@ -33,18 +22,7 @@ The `isValid()` function ensures:
 
 Any tampering breaks the chain.
 
----
-
-## Proof-of-Work (Bonus)
-Proof-of-Work is implemented by:
-- Incrementing a nonce
-- Recalculating the hash until it starts with `"00"`
-- Difficulty is adjustable
-
-This simulates mining effort.
-
----
 
 ## How to Run
-```bash
+in bash/terminal
 node blockchain.js

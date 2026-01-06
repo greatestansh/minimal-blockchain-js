@@ -1,4 +1,4 @@
-const crypto = require("crypto");
+let crypto = require("crypto");
 
 class Block {
     constructor(index, timestamp, data, previousHash = "", nonce = 0) {
@@ -27,7 +27,7 @@ class Block {
 class Blockchain {
     constructor() {
         this.chain = [this.createGenesisBlock()];
-        this.difficulty = 2; // "00"
+        this.difficulty = 2;
     }
 
     createGenesisBlock() {
@@ -77,7 +77,6 @@ class Blockchain {
     }
 }
 
-// Example usage
 const myBlockchain = new Blockchain();
 myBlockchain.addBlock("First block data");
 myBlockchain.addBlock("Second block data");
